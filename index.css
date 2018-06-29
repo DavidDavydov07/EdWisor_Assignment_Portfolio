@@ -1,0 +1,9 @@
+:root {
+	font-size: 1em;
+}
+
+head, body, div{
+	position: relative;
+	font-size: rem;
+	
+}
