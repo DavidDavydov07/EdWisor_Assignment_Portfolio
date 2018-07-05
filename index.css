@@ -12,6 +12,7 @@
 	min-height: 5%;
 	width: 100%;
 	
+	
 	background-color: #F1FFE7;
 	background-image: url("https://www.transparenttextures.com/patterns/exclusive-paper.png");
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
@@ -30,6 +31,16 @@
 	z-index: 1;
 }
 
+.NavBarGhost {
+	position: relative; 
+	margin-bottom: 5%; 
+	
+	width: 95%;
+	
+	z-index: -5; 
+	box-shadow: 0px 0px 0px #000000; 
+}
+
 .NavBtn {
 	min-width: 100px;
 	min-height: 5%;
@@ -43,13 +54,45 @@
 	font-size: 1rem;
 }
 
+
+
+
+
+
+.InfoContainer {
+	flex-direction: wrap; 
+	
+	width: 30%;
+}
+
+.MainContainer {
+	flex-direction: column; 
+	margin-left: 1%px;
+	
+	width:70%;
+}
+
+.PictureHolder {
+	display: block; 
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+		
+	width: 128px; 
+	height: 128px; 
+	
+	box-shadow: inset 0px 5px 8px #000000; 
+	border-radius: 50%; 
+	background-image: url('avatar-1577909_640.png'); 
+	background-size: 128px 128px;
+}
+
 .MainBody {
-	max-width: 80%;
-	min-height: 150%;
+	width: 80%;
 	display: flex;
+	flex-direction: wrap;
 	margin-left: 10%;
 	position: relative;
-	padding: 12px;
 	
 	color: 6C464E;
 	font-size: 1.2rem;
@@ -61,6 +104,19 @@
 	
 	box-shadow: 0px 10px 40px #000000;
 	z-index: 2;
+}
+
+
+
+
+
+.ListOrder {
+	display: flex; 
+	flex-wrap: wrap;
+}
+
+.ListWidth {
+	width: 45%;
 }
 
 .TitleCard {
@@ -84,4 +140,73 @@ body {
 div {
 	padding-left: 1%;
 	padding-right: 1%;
+}
+
+@media (min-aspect-ratio: 11/10) {
+	.MainBody {
+		flex-direction: wrap;
+		font-size: 1rem;
+	}
+  
+	.InfoContainer {
+		width: 20%;
+		
+	}
+	
+	.MainContainer {
+		width: 80%;
+	}
+	
+	.ContactInfo {
+		text-align: left;
+	}
+	
+	.PictureHolder {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+@media (max-aspect-ratio: 11/10) {
+	.MainBody {
+		flex-direction: column;
+		font-size: 0.8rem;
+	}
+  
+	.InfoContainer {
+		width: 100%;
+	}
+	
+	.MainContainer {
+		width: 100%;
+	}
+	
+	.ContactInfo {
+		text-align: center;
+	}
+	
+	.PictureHolder {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media (min-aspect-ratio: 2/3) {
+	.ListOrder {
+		flex-direction: wrap;
+	}
+	
+	.ListWidth {
+		width: 45%;
+	}
+}
+
+@media (max-aspect-ratio: 2/3) {
+	.ListOrder {
+		flex-direction: column;
+	}
+	
+	.ListWidth {
+		width: 100%;
+	}
 }
